@@ -271,31 +271,31 @@ function App() {
           className={`tab-btn ${activeTab === 'imessage' ? 'active' : ''}`}
           onClick={() => setActiveTab('imessage')}
         >
-          💬 Chat Dynamic
+          💬 Chat
         </button>
         <button 
           className={`tab-btn ${activeTab === 'counter' ? 'active' : ''}`}
           onClick={() => setActiveTab('counter')}
         >
-          ⏳ Drought Counter
+          ⏳ Drought
         </button>
         <button 
           className={`tab-btn ${activeTab === 'excuse' ? 'active' : ''}`}
           onClick={() => setActiveTab('excuse')}
         >
-          🤡 Excuse Generator
+          🤡 Excuses
         </button>
         <button 
           className={`tab-btn ${activeTab === 'trade' ? 'active' : ''}`}
           onClick={() => setActiveTab('trade')}
         >
-          🏀 Trade Machine
+          🏀 Trades
         </button>
         <button 
           className={`tab-btn ${activeTab === 'refund' ? 'active' : ''}`}
           onClick={() => setActiveTab('refund')}
         >
-          🎟️ Ticket Refund
+          🎟️ Refund
         </button>
       </nav>
 
