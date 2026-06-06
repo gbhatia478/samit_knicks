@@ -149,6 +149,14 @@ body {
   box-shadow: 0 4px 12px rgba(245, 132, 38, 0.2);
 }
 
+.tab-icon {
+  font-size: 1.15rem;
+}
+
+.tab-label {
+  font-weight: 500;
+}
+
 /* Content Container */
 .tab-content {
   animation: fadeIn 0.4s ease-out;
@@ -792,37 +800,50 @@ body {
     max-width: 100% !important;
     margin: 0 !important;
     border-radius: 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background: rgba(10, 13, 20, 0.88);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(18, 22, 38, 0.96) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
     z-index: 999;
-    padding: 0.6rem 0.5rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+    padding: 0.75rem 0.5rem calc(0.75rem + env(safe-area-inset-bottom, 0px)) !important;
+    height: calc(4.2rem + env(safe-area-inset-bottom, 0px)) !important;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6) !important;
+    display: flex;
     justify-content: space-around;
     gap: 0;
   }
   
   .tab-btn {
-    flex-direction: column;
-    font-size: 0.725rem;
-    font-weight: 600;
-    padding: 0.4rem 0.25rem;
-    border-radius: var(--radius-sm);
-    gap: 4px;
+    flex-direction: column !important;
+    padding: 0 !important;
+    gap: 2px !important;
     background: transparent !important;
     box-shadow: none !important;
     color: var(--text-secondary);
     flex: 1;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+    opacity: 0.6;
+    transition: opacity 0.2s, color 0.2s;
   }
   
   .tab-btn.active {
-    color: #FFF !important;
-    background: rgba(255, 255, 255, 0.05) !important;
+    opacity: 1;
+    color: var(--knicks-orange-text) !important;
+    background: transparent !important;
+  }
+
+  .tab-btn .tab-icon {
+    font-size: 1.35rem !important;
+  }
+
+  .tab-btn .tab-label {
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
   }
 
   /* Prevent content overlap with the bottom tab bar */

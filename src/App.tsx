@@ -271,31 +271,36 @@ function App() {
           className={`tab-btn ${activeTab === 'imessage' ? 'active' : ''}`}
           onClick={() => setActiveTab('imessage')}
         >
-          💬 Chat
+          <span className="tab-icon">💬</span>
+          <span className="tab-label">Chat</span>
         </button>
         <button 
           className={`tab-btn ${activeTab === 'counter' ? 'active' : ''}`}
           onClick={() => setActiveTab('counter')}
         >
-          ⏳ Drought
+          <span className="tab-icon">⏳</span>
+          <span className="tab-label">Drought</span>
         </button>
         <button 
           className={`tab-btn ${activeTab === 'excuse' ? 'active' : ''}`}
           onClick={() => setActiveTab('excuse')}
         >
-          🤡 Excuses
+          <span className="tab-icon">🤡</span>
+          <span className="tab-label">Excuses</span>
         </button>
         <button 
           className={`tab-btn ${activeTab === 'trade' ? 'active' : ''}`}
           onClick={() => setActiveTab('trade')}
         >
-          🏀 Trades
+          <span className="tab-icon">🏀</span>
+          <span className="tab-label">Trades</span>
         </button>
         <button 
           className={`tab-btn ${activeTab === 'refund' ? 'active' : ''}`}
           onClick={() => setActiveTab('refund')}
         >
-          🎟️ Refund
+          <span className="tab-icon">🎟️</span>
+          <span className="tab-label">Refund</span>
         </button>
       </nav>
 
