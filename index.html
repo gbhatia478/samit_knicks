@@ -13,7 +13,9 @@
             api_host: 'https://us.i.posthog.com',
             defaults: '2026-05-30',
             person_profiles: 'identified_only',
-        })
+            disable_session_recording: false,
+        });
+        posthog.startSessionRecording();
     </script>
     <script type="module" crossorigin src="/samit_knicks/assets/index-DtarqzcS.js"></script>
     <link rel="stylesheet" crossorigin href="/samit_knicks/assets/index-DySFIssJ.css">
