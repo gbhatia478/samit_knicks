@@ -32,7 +32,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
   background-color: var(--bg-dark);
   color: var(--text-primary);
   font-family: var(--font-primary);
@@ -780,3 +780,228 @@ body {
   color: var(--knicks-orange-text);
   text-decoration: none;
 }
+
+/* iPhone Pro & Mobile Optimizations */
+@media (max-width: 600px) {
+  .nav-tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(10, 13, 20, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 999;
+    padding: 0.6rem 0.5rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+    justify-content: space-around;
+    gap: 0;
+  }
+  
+  .tab-btn {
+    flex-direction: column;
+    font-size: 0.725rem;
+    font-weight: 600;
+    padding: 0.4rem 0.25rem;
+    border-radius: var(--radius-sm);
+    gap: 4px;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: var(--text-secondary);
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tab-btn.active {
+    color: #FFF !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* Prevent content overlap with the bottom tab bar */
+  .app-container {
+    padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .app-title {
+    font-size: 2.15rem;
+    line-height: 1.15;
+  }
+  
+  .app-subtitle {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+  }
+  
+  .badge-container {
+    margin-bottom: 0.5rem;
+  }
+  
+  .glass-card {
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .imessage-container {
+    border-radius: var(--radius-md);
+  }
+  
+  .imessage-body {
+    height: 350px;
+    padding: 1rem 0.75rem;
+  }
+  
+  .message-group {
+    max-width: 85%;
+  }
+  
+  .message-bubble {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 15px;
+  }
+  
+  .imessage-input-area {
+    padding: 0.6rem 0.75rem;
+  }
+  
+  .input-mock {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .send-mock-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .counter-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.25rem;
+    margin: 1.5rem 0;
+  }
+  
+  .counter-item {
+    padding: 0.75rem 0.25rem;
+    border-radius: var(--radius-sm);
+  }
+  
+  .counter-value {
+    font-size: 1.25rem;
+  }
+  
+  .counter-label {
+    font-size: 0.55rem;
+    margin-top: 0.25rem;
+  }
+  
+  .counter-footer-text {
+    font-size: 0.85rem;
+  }
+  
+  .excuse-box {
+    padding: 1.75rem 1rem;
+    min-height: 100px;
+  }
+  
+  .excuse-text {
+    font-size: 1.15rem;
+  }
+  
+  .trade-row {
+    gap: 0.75rem;
+  }
+  
+  .trade-column {
+    padding: 1rem;
+  }
+  
+  .trade-team-header {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .trade-item {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.75rem;
+  }
+  
+  .trade-verdict-box {
+    padding: 1.25rem;
+  }
+  
+  .verdict-header {
+    margin-bottom: 1rem;
+  }
+  
+  .verdict-title {
+    font-size: 1.15rem;
+  }
+  
+  .verdict-score {
+    font-size: 1.15rem;
+  }
+  
+  .verdict-details {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .detail-metric {
+    padding: 0.75rem;
+  }
+  
+  .metric-value {
+    font-size: 1rem;
+  }
+  
+  .refund-form {
+    gap: 1rem;
+  }
+  
+  .slider-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .slider-label {
+    text-align: left;
+    min-width: unset;
+  }
+  
+  .checkbox-group {
+    align-items: flex-start;
+  }
+  
+  .checkbox-group input {
+    margin-top: 0.2rem;
+  }
+  
+  .popup-box {
+    padding: 2rem 1.25rem;
+  }
+  
+  .app-footer {
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
